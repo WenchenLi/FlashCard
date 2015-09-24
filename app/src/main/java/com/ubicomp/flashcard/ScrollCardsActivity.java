@@ -49,13 +49,14 @@ public class ScrollCardsActivity extends Activity {
         setContentView(mCardScroller);
         setCardScrollerListener();
     }
-
+    // make things
     private List<CardBuilder> createLoadCard(Context context) {
         ArrayList<CardBuilder> cards = new ArrayList<CardBuilder>();
-        cards.add(new CardBuilder(context, CardBuilder.Layout.TEXT)
-                .setText("loading images ...")
-                .setFootnote("Available processors:" + Integer.toString(//determine available processors
-                        Runtime.getRuntime().availableProcessors())));
+        cards.add(new CardBuilder(context, CardBuilder.Layout.CAPTION)
+                .addImage(R.drawable.stevejobs));
+//                .setText("loading images ...")
+//                .setFootnote("Available processors:" + Integer.toString(//determine available processors
+//                        Runtime.getRuntime().availableProcessors())));
 
 
         return cards;
@@ -188,7 +189,11 @@ public class ScrollCardsActivity extends Activity {
         }
         protected List<CardBuilder> doInBackground(Context... params) {
             Log.v(TAG+"ASYN","Strat dib");
-
+            try {
+                Thread.sleep(1000 * 5);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
             Log.v(TAG+"ASYN","end dib");
             return cards;
         }
@@ -202,6 +207,9 @@ public class ScrollCardsActivity extends Activity {
         protected void onPostExecute(List<CardBuilder> result) {
 //            listener.processFinish(result);
             Log.v(TAG, "OnPostExecute");
+            //temp stuff to show loading card
+
+
             mAdapter = new CardAdapter(cards);
             mCardScroller.setAdapter(mAdapter);
             // Tells the CardScrollView to activate and be ready for display.
