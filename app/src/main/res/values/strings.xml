@@ -3,11 +3,13 @@
     <string name="title_activity_main">Hello World Immersion</string>
     <string name="hello_world">Hello world!</string>
     <string name="voice_launch">FlashCard</string>
+    <string name="glass_voice_prompt">Want to create new card?</string>
     <string name="delete">Delete from Glass</string>
     <!-- Used to build a voice menu. -->
     <string name="create_card">Create Card</string>
+     <string name="clear_all">Clear All</string>
     <string name="remember_cards">Remember Cards</string>
-    <string name="menu_autodelete">AutoDelete</string>
+    <string name="menu_delete_card">Delete Card</string>
     <string name="menu_autodelete_on">On</string>
     <string name="menu_autodelete_off">Off</string>
 </resources>

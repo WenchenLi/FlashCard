@@ -1,2 +1,6 @@
 <!-- For more information about voice trigger, check out: https://developers.google.com/glass/develop/gdk/starting-glassware -->
-<trigger keyword="@string/voice_launch" />
+<trigger keyword="@string/voice_launch" >
+    <constraints
+        network="false" />
+    <!--<input prompt="@string/glass_voice_prompt"/>-->
+</trigger>
